@@ -11,7 +11,7 @@
 
 #include "pervasive.h"
 
-static void print_help (const char runnable [])
+static void print_help (const char runnable [const restrict static 1])
 {
    printf
    (
