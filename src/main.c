@@ -20,9 +20,9 @@ static void print_help (const char runnable [const restrict static 1])
       "Protocol Version %d\n"
       "\nUsages:\n"
       "   JH GATEWAY:\t%s SOCKET_NAME\n"
-      "   SHOW HELP:\tAnything else\n"
+      "   SHOW HELP:\tAnything else.\n"
       "\nParameters:\n"
-      "   SOCKET_NAME: valid UNIX socket.\n",
+      "   SOCKET_NAME:\tValid UNIX socket.\n",
       JH_PROGRAM_VERSION,
       JH_PROTOCOL_VERSION,
       runnable
