@@ -13,9 +13,11 @@ build: $(EXECUTABLE)
 $(EXECUTABLE): $(SRC_DIR)/export.a
 	$(CC) $(CFLAGS) -o $@ $<
 
-$(SRC_DIR)/export.a:
+$(SRC_DIR)/export.a: .JUST_CHECK
 	$(MAKE) -C $(SRC_DIR) export.a
 
 clean:
 	$(MAKE) -C $(SRC_DIR) clean
 	rm -f $(EXECUTABLE)
+
+.JUST_CHECK:
