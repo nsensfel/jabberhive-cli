@@ -20,4 +20,17 @@ send.
 ## Dependencies
 - POSIX compliant OS.
 - C compiler (with C99 support).
-- (GNU) make
+- (GNU) make.
+
+## How to Build
+* Download the source code.
+* Enter the following command: ``$ make``.
+* Run ``$ ./jh-cli`` to see how to use the binary.
+
+## Examples of Use
+* Debug a JabberHive network by connecting to the socket ``/tmp/jh0``:
+   ``$ ./jh-cli /tmp/jh0``, then ``?RR what's up, doc?``.
+* Teach a JabberHive network the content of some file through the socket
+   ``/tmp/jh0``: each line of the file should start by ``?RL ``, then it is
+   simply a case of ``$ cat file | ./jh-cli /tmp/jh0``. Cutting files so that
+   this can be run in parallel is recommended.
