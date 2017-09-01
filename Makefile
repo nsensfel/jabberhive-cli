@@ -11,7 +11,7 @@ export
 build: $(EXECUTABLE)
 
 $(EXECUTABLE): $(SRC_DIR)/export.a
-	$(CC) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $<
 
 $(SRC_DIR)/export.a:
 	$(MAKE) -C $(SRC_DIR) export.a
